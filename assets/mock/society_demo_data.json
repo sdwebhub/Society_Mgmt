@@ -1,0 +1,432 @@
+{
+  "society": {
+    "name": "Green Pines Residency",
+    "location": "Baner, Pune",
+    "address": "Plot 12, Baner, Pune 411045",
+    "registrationNumber": "MH/2019/04521",
+    "totalUnits": 120,
+    "occupiedUnits": 118,
+    "vacantUnits": 2,
+    "pendingBillsCount": 12,
+    "openIssuesCount": 4,
+    "memberCount": 120,
+    "activeNoticesCount": 3,
+    "monthlyCollectionLabel": "Rs. 2.4L",
+    "collectionRate": 68,
+    "dueAmount": 3200,
+    "version": "v2.4.1",
+    "buildNumber": 241
+  },
+  "adminUserId": "u_admin",
+  "memberUserId": "u_member",
+  "users": [
+    {
+      "id": "u_admin",
+      "role": "admin",
+      "memberType": "admin",
+      "name": "Rajesh Sharma",
+      "email": "admin@greenpines.com",
+      "phone": "+91 98765 43210",
+      "flat": "A-101",
+      "wing": "A",
+      "password": "Admin@123",
+      "title": "Society Admin",
+      "initials": "RS"
+    },
+    {
+      "id": "u_member",
+      "role": "member",
+      "memberType": "owner",
+      "name": "Priya Nair",
+      "email": "priya.nair@example.com",
+      "phone": "+91 91234 56780",
+      "flat": "A-302",
+      "wing": "A",
+      "password": "Member@123",
+      "title": "Resident Member",
+      "initials": "PN"
+    },
+    {
+      "id": "u_amit",
+      "role": "member",
+      "memberType": "tenant",
+      "name": "Amit Joshi",
+      "email": "amit.joshi@example.com",
+      "phone": "+91 98765 01234",
+      "flat": "B-204",
+      "wing": "B",
+      "password": "Tenant@123",
+      "title": "Resident Member",
+      "initials": "AJ"
+    },
+    {
+      "id": "u_suresh",
+      "role": "member",
+      "memberType": "owner",
+      "name": "Suresh Kumar",
+      "email": "suresh.kumar@example.com",
+      "phone": "+91 99887 76655",
+      "flat": "B-105",
+      "wing": "B",
+      "password": "Owner@123",
+      "title": "Resident Member",
+      "initials": "SK"
+    },
+    {
+      "id": "u_meena",
+      "role": "member",
+      "memberType": "owner",
+      "name": "Meena Iyer",
+      "email": "meena.iyer@example.com",
+      "phone": "+91 90123 45678",
+      "flat": "C-301",
+      "wing": "C",
+      "password": "Owner@123",
+      "title": "Resident Member",
+      "initials": "MI"
+    },
+    {
+      "id": "u_vijay",
+      "role": "member",
+      "memberType": "tenant",
+      "name": "Vijay Rao",
+      "email": "vijay.rao@example.com",
+      "phone": "+91 97654 32109",
+      "flat": "C-204",
+      "wing": "C",
+      "password": "Tenant@123",
+      "title": "Resident Member",
+      "initials": "VR"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "CMP-2025-047",
+      "title": "Water Leakage - B-204",
+      "flatNumber": "B-204",
+      "reporterId": "u_amit",
+      "reporterName": "Amit Joshi",
+      "dateLabel": "Apr 22, 2025",
+      "relativeLabel": "2h ago",
+      "description": "There is a water leak from the ceiling of the bathroom in flat B-204. The leakage started on April 21 and has been worsening. It is damaging furniture and the floor below.",
+      "shortDescription": "Ceiling leakage causing damage to furniture and walls.",
+      "category": "Plumbing",
+      "priority": "urgent",
+      "status": "in_progress",
+      "assignedToName": "Rakesh Kumar",
+      "assignedToRole": "Plumbing Technician",
+      "activities": [
+        {
+          "title": "Complaint Filed",
+          "subtitle": "Apr 22, 9:30 AM - by Amit Joshi",
+          "accent": "green"
+        },
+        {
+          "title": "Assigned to Technician",
+          "subtitle": "Apr 22, 11:15 AM - by Admin",
+          "accent": "blue"
+        },
+        {
+          "title": "Work In Progress",
+          "subtitle": "Apr 23, 2:00 PM - by Rakesh Kumar",
+          "note": "Identified the source. Pipe joint needs replacement. Will complete by Apr 24.",
+          "accent": "orange"
+        }
+      ]
+    },
+    {
+      "id": "CMP-2025-046",
+      "title": "Lift Not Working - A Wing",
+      "flatNumber": "A Wing",
+      "reporterId": "u_member",
+      "reporterName": "Priya Nair",
+      "dateLabel": "Apr 20, 2025",
+      "relativeLabel": "5h ago",
+      "description": "The lift in A Wing is not responding and is currently stopped on the third floor.",
+      "shortDescription": "Lift service disruption in A Wing.",
+      "category": "Lift",
+      "priority": "high",
+      "status": "open",
+      "assignedToName": "",
+      "assignedToRole": "",
+      "activities": [
+        {
+          "title": "Complaint Filed",
+          "subtitle": "Apr 20, 8:40 AM - by Priya Nair",
+          "accent": "green"
+        }
+      ]
+    },
+    {
+      "id": "CMP-2025-045",
+      "title": "Parking Space Blocked",
+      "flatNumber": "B-105",
+      "reporterId": "u_suresh",
+      "reporterName": "Suresh Kumar",
+      "dateLabel": "Apr 19, 2025",
+      "relativeLabel": "1d ago",
+      "description": "Unauthorized vehicle is blocking the assigned parking bay.",
+      "shortDescription": "Parking bay access issue near the basement slot.",
+      "category": "Parking",
+      "priority": "medium",
+      "status": "in_progress",
+      "assignedToName": "Security Desk",
+      "assignedToRole": "Facility Team",
+      "activities": [
+        {
+          "title": "Complaint Filed",
+          "subtitle": "Apr 19, 7:10 PM - by Suresh Kumar",
+          "accent": "green"
+        }
+      ]
+    },
+    {
+      "id": "CMP-2025-044",
+      "title": "Streetlight Repair - Gate 2",
+      "flatNumber": "Gate 2",
+      "reporterId": "u_meena",
+      "reporterName": "Meena Iyer",
+      "dateLabel": "Apr 15, 2025",
+      "relativeLabel": "3d ago",
+      "description": "The streetlight outside Gate 2 was repaired and the complaint is now resolved.",
+      "shortDescription": "Streetlight issue resolved successfully.",
+      "category": "Electrical",
+      "priority": "low",
+      "status": "resolved",
+      "assignedToName": "Electrical Vendor",
+      "assignedToRole": "Maintenance Contractor",
+      "activities": [
+        {
+          "title": "Complaint Filed",
+          "subtitle": "Apr 15, 6:30 PM - by Meena Iyer",
+          "accent": "green"
+        },
+        {
+          "title": "Resolved",
+          "subtitle": "Apr 16, 1:00 PM - by Electrical Vendor",
+          "accent": "green"
+        }
+      ]
+    }
+  ],
+  "bills": [
+    {
+      "id": "bill_apr_2025",
+      "title": "Maintenance - April 2025",
+      "period": "April 2025",
+      "flatNumber": "A-302",
+      "amount": 3200,
+      "dueDateLabel": "Apr 10, 2025",
+      "billDateLabel": "Apr 1, 2025",
+      "status": "overdue",
+      "summaryLabel": "Due: Apr 10, 2025 - Overdue by 12 days",
+      "overdueLabel": "Due date was Apr 10, 2025",
+      "lineItems": [
+        {
+          "label": "Maintenance Charges",
+          "amount": 2500
+        },
+        {
+          "label": "Water Charges",
+          "amount": 400
+        },
+        {
+          "label": "Sinking Fund",
+          "amount": 200
+        },
+        {
+          "label": "Late Payment Fee",
+          "amount": 100,
+          "highlight": true
+        }
+      ]
+    },
+    {
+      "id": "bill_mar_2025",
+      "title": "Maintenance - March 2025",
+      "period": "March 2025",
+      "flatNumber": "A-302",
+      "amount": 3200,
+      "dueDateLabel": "Mar 10, 2025",
+      "billDateLabel": "Mar 1, 2025",
+      "status": "paid",
+      "summaryLabel": "Paid: Mar 8, 2025",
+      "paidDateLabel": "Paid on Mar 8, 2025",
+      "lineItems": [
+        {
+          "label": "Maintenance Charges",
+          "amount": 2500
+        },
+        {
+          "label": "Water Charges",
+          "amount": 400
+        },
+        {
+          "label": "Sinking Fund",
+          "amount": 300
+        }
+      ]
+    },
+    {
+      "id": "bill_feb_2025",
+      "title": "Maintenance - Feb 2025",
+      "period": "Feb 2025",
+      "flatNumber": "A-302",
+      "amount": 3200,
+      "dueDateLabel": "Feb 10, 2025",
+      "billDateLabel": "Feb 1, 2025",
+      "status": "paid",
+      "summaryLabel": "Paid: Feb 7, 2025",
+      "paidDateLabel": "Paid on Feb 7, 2025",
+      "lineItems": [
+        {
+          "label": "Maintenance Charges",
+          "amount": 2500
+        },
+        {
+          "label": "Water Charges",
+          "amount": 400
+        },
+        {
+          "label": "Sinking Fund",
+          "amount": 300
+        }
+      ]
+    },
+    {
+      "id": "bill_parking_apr_2025",
+      "title": "Parking Fee - April 2025",
+      "period": "April 2025",
+      "flatNumber": "A-302",
+      "amount": 500,
+      "dueDateLabel": "Apr 15, 2025",
+      "billDateLabel": "Apr 1, 2025",
+      "status": "pending",
+      "summaryLabel": "Due: Apr 15, 2025",
+      "lineItems": [
+        {
+          "label": "Parking Charges",
+          "amount": 500
+        }
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "id": "notice_agm",
+      "title": "Annual General Meeting - May 5th, 2025",
+      "summary": "All residents are requested to attend the AGM at the Community Hall, Block A. Agenda includes committee elections and budget approval.",
+      "content": "Dear Residents,\n\nWe are pleased to invite all members of Green Pines Residency to the Annual General Meeting scheduled for Sunday, May 5th, 2025 at 10:00 AM in the Community Hall, Block A, Ground Floor.\n\nAgenda:\n1. Review of 2024-25 financial accounts\n2. Election of new committee members\n3. Approval of 2025-26 maintenance budget\n4. Discussion of infrastructure improvement proposals\n\nYour presence is strongly encouraged. Quorum requires 50% attendance.\n\nRegards,\nSociety Management Committee",
+      "category": "important",
+      "dateLabel": "Apr 20, 2025",
+      "authorName": "Rajesh Sharma",
+      "authorRole": "Society Admin"
+    },
+    {
+      "id": "notice_water",
+      "title": "Water Supply Interruption - Apr 22",
+      "summary": "Water supply will be shut from 10 AM to 2 PM. Please store adequate water.",
+      "content": "Scheduled maintenance of the overhead tank will temporarily interrupt the water supply between 10 AM and 2 PM on Apr 22. Residents are requested to store sufficient water in advance.",
+      "category": "maintenance",
+      "dateLabel": "Apr 18, 2025",
+      "authorName": "Rajesh Sharma",
+      "authorRole": "Society Admin"
+    },
+    {
+      "id": "notice_holi",
+      "title": "Holi Celebration - Rooftop Party",
+      "summary": "Join us for the Holi celebration on the rooftop terrace with music, snacks, and community games.",
+      "content": "Join the residents for our Holi celebration on the rooftop terrace. Colors, music, snacks, and family activities will be available for all age groups.",
+      "category": "general",
+      "dateLabel": "Apr 15, 2025",
+      "authorName": "Cultural Committee",
+      "authorRole": "Resident Group"
+    },
+    {
+      "id": "notice_visitor",
+      "title": "New Visitor Entry Policy Effective May 1",
+      "summary": "All visitors must register at the security cabin. A QR-based entry workflow will be enabled.",
+      "content": "From May 1, all visitors must register at the security cabin before entering the premises. A QR-based visitor management system will be activated for faster approvals and improved security.",
+      "category": "circular",
+      "dateLabel": "Apr 10, 2025",
+      "authorName": "Security Committee",
+      "authorRole": "Facility Team"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_agm",
+      "title": "AGM - Annual General Meeting",
+      "venue": "Community Hall, Block A",
+      "dateLabel": "Sunday, May 5",
+      "timeLabel": "10:00 AM - 1:00 PM",
+      "description": "The Annual General Meeting will cover financial account review, committee elections, and budget approval for 2025-26. All residents are encouraged to attend.",
+      "status": "upcoming",
+      "emoji": "celebration",
+      "accent": "blue",
+      "attendees": [
+        {
+          "name": "Rajesh Sharma",
+          "initials": "RS",
+          "accent": "blue"
+        },
+        {
+          "name": "Priya Nair",
+          "initials": "PN",
+          "accent": "green"
+        },
+        {
+          "name": "Amit Joshi",
+          "initials": "AJ",
+          "accent": "orange"
+        },
+        {
+          "name": "Meena Iyer",
+          "initials": "MI",
+          "accent": "purple"
+        }
+      ]
+    },
+    {
+      "id": "event_garden",
+      "title": "Society Garden Day",
+      "venue": "Common Garden, Gate 1",
+      "dateLabel": "Saturday, Apr 27",
+      "timeLabel": "7:00 AM",
+      "description": "Join your neighbors for a community garden cleanup and planting drive. Gloves and tools will be provided on-site.",
+      "status": "upcoming",
+      "emoji": "eco",
+      "accent": "green",
+      "attendees": [
+        {
+          "name": "Residents Group",
+          "initials": "24",
+          "accent": "green"
+        }
+      ]
+    },
+    {
+      "id": "event_holi",
+      "title": "Holi Celebration - Rooftop",
+      "venue": "Rooftop Terrace",
+      "dateLabel": "Mar 25",
+      "timeLabel": "4:00 PM - 8:00 PM",
+      "description": "A completed community celebration with music, colors, snacks, and games for the whole society.",
+      "status": "completed",
+      "emoji": "sports",
+      "accent": "purple",
+      "attendees": []
+    }
+  ],
+  "settings": {
+    "pushNotifications": true,
+    "emailAlerts": true,
+    "smsAlerts": false,
+    "eventReminders": true,
+    "biometricLogin": false,
+    "twoFactorAuth": true,
+    "profileVisibility": true,
+    "darkMode": false,
+    "language": "English"
+  }
+}
