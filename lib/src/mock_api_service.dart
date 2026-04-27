@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'models.dart';
 
-import 'package:http/http.dart' as http;
+//import 'package:http/http.dart' as http;
 
 class ApiException implements Exception {
   ApiException(this.message);
@@ -43,76 +43,76 @@ class MockSocietyApi {
     return currentData;
   }
 
-  // Future<AppUser> login({
-  //   required UserRole role,
-  //   required String identifier,
-  //   required String password,
-  // }) async {
-  //   await _latency();
-
-  //   final normalizedIdentifier = identifier.trim().toLowerCase();
-  //   final user = _findUserByRole(role);
-
-  //   final matchesEmail = user.email.toLowerCase() == normalizedIdentifier;
-  //   final matchesPhone = _digitsOnly(user.phone) == _digitsOnly(identifier);
-  //   if (!matchesEmail && !matchesPhone) {
-  //     throw ApiException('No ${role.label.toLowerCase()} account matches that email or mobile number.');
-  //   }
-  //   if (user.password != password.trim()) {
-  //     throw ApiException('Incorrect password. Use the demo credentials shown in the form.');
-  //   }
-
-  //   return user;
-  // }
-
   Future<AppUser> login({
     required UserRole role,
     required String identifier,
     required String password,
   }) async {
-    final url = Uri.parse(
-      'http://localhost:5226/api/Auth/login',
-    ); // ⚠️ not localhost
+    await _latency();
 
-    final response = await http.post(
-      url,
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({"email": identifier, "password": password}),
-    );
+    final normalizedIdentifier = identifier.trim().toLowerCase();
+    final user = _findUserByRole(role);
 
-    if (response.statusCode == 200) {
-      final result = jsonDecode(response.body);
-
-      if (result['success'] == true) {
-        final data = result['data'];
-
-        // 🔹 Map API → AppUser
-        final user = AppUser(
-          id: data['userId'].toString(),
-          role: role,
-          memberType: MemberType.owner, // ✅ FIX (choose default)
-          name: data['firstName'],
-          email: data['email'],
-          phone: '',
-          password: '',
-          flat: '',
-          wing: '',
-          initials: data['firstName'][0].toUpperCase(),
-          title: role.label,
-        );
-
-        // 👉 You should store token here
-        final token = data['token'];
-        print("TOKEN: $token");
-
-        return user;
-      } else {
-        throw ApiException(result['message']);
-      }
-    } else {
-      throw ApiException("Server error: ${response.statusCode}");
+    final matchesEmail = user.email.toLowerCase() == normalizedIdentifier;
+    final matchesPhone = _digitsOnly(user.phone) == _digitsOnly(identifier);
+    if (!matchesEmail && !matchesPhone) {
+      throw ApiException('No ${role.label.toLowerCase()} account matches that email or mobile number.');
     }
+    if (user.password != password.trim()) {
+      throw ApiException('Incorrect password. Use the demo credentials shown in the form.');
+    }
+
+    return user;
   }
+
+  // Future<AppUser> login({
+  //   required UserRole role,
+  //   required String identifier,
+  //   required String password,
+  // }) async {
+  //   final url = Uri.parse(
+  //     'http://localhost:5226/api/Auth/login',
+  //   ); // ⚠️ not localhost
+
+  //   final response = await http.post(
+  //     url,
+  //     headers: {'Content-Type': 'application/json'},
+  //     body: jsonEncode({"email": identifier, "password": password}),
+  //   );
+
+  //   if (response.statusCode == 200) {
+  //     final result = jsonDecode(response.body);
+
+  //     if (result['success'] == true) {
+  //       final data = result['data'];
+
+  //       // 🔹 Map API → AppUser
+  //       final user = AppUser(
+  //         id: data['userId'].toString(),
+  //         role: role,
+  //         memberType: MemberType.owner, // ✅ FIX (choose default)
+  //         name: data['firstName'],
+  //         email: data['email'],
+  //         phone: '',
+  //         password: '',
+  //         flat: '',
+  //         wing: '',
+  //         initials: data['firstName'][0].toUpperCase(),
+  //         title: role.label,
+  //       );
+
+  //       // 👉 You should store token here
+  //       final token = data['token'];
+  //       print("TOKEN: $token");
+
+  //       return user;
+  //     } else {
+  //       throw ApiException(result['message']);
+  //     }
+  //   } else {
+  //     throw ApiException("Server error: ${response.statusCode}");
+  //   }
+  // }
 
   Future<AppUser> registerSociety(RegisterSocietyRequest request) async {
     await _latency();
